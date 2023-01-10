@@ -1,0 +1,15 @@
+C:\Users\adiar\OneDrive\Desktop\iths\ithsclass\bankappwithjaggedarray\bankappwithjaggedarray\bin\Debug\net6.0\bankappwithjaggedarray.exe
+C:\Users\adiar\OneDrive\Desktop\iths\ithsclass\bankappwithjaggedarray\bankappwithjaggedarray\bin\Debug\net6.0\bankappwithjaggedarray.deps.json
+C:\Users\adiar\OneDrive\Desktop\iths\ithsclass\bankappwithjaggedarray\bankappwithjaggedarray\bin\Debug\net6.0\bankappwithjaggedarray.runtimeconfig.json
+C:\Users\adiar\OneDrive\Desktop\iths\ithsclass\bankappwithjaggedarray\bankappwithjaggedarray\bin\Debug\net6.0\bankappwithjaggedarray.dll
+C:\Users\adiar\OneDrive\Desktop\iths\ithsclass\bankappwithjaggedarray\bankappwithjaggedarray\bin\Debug\net6.0\bankappwithjaggedarray.pdb
+C:\Users\adiar\OneDrive\Desktop\iths\ithsclass\bankappwithjaggedarray\bankappwithjaggedarray\obj\Debug\net6.0\bankappwithjaggedarray.csproj.AssemblyReference.cache
+C:\Users\adiar\OneDrive\Desktop\iths\ithsclass\bankappwithjaggedarray\bankappwithjaggedarray\obj\Debug\net6.0\bankappwithjaggedarray.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adiar\OneDrive\Desktop\iths\ithsclass\bankappwithjaggedarray\bankappwithjaggedarray\obj\Debug\net6.0\bankappwithjaggedarray.AssemblyInfoInputs.cache
+C:\Users\adiar\OneDrive\Desktop\iths\ithsclass\bankappwithjaggedarray\bankappwithjaggedarray\obj\Debug\net6.0\bankappwithjaggedarray.AssemblyInfo.cs
+C:\Users\adiar\OneDrive\Desktop\iths\ithsclass\bankappwithjaggedarray\bankappwithjaggedarray\obj\Debug\net6.0\bankappwithjaggedarray.csproj.CoreCompileInputs.cache
+C:\Users\adiar\OneDrive\Desktop\iths\ithsclass\bankappwithjaggedarray\bankappwithjaggedarray\obj\Debug\net6.0\bankappwithjaggedarray.dll
+C:\Users\adiar\OneDrive\Desktop\iths\ithsclass\bankappwithjaggedarray\bankappwithjaggedarray\obj\Debug\net6.0\refint\bankappwithjaggedarray.dll
+C:\Users\adiar\OneDrive\Desktop\iths\ithsclass\bankappwithjaggedarray\bankappwithjaggedarray\obj\Debug\net6.0\bankappwithjaggedarray.pdb
+C:\Users\adiar\OneDrive\Desktop\iths\ithsclass\bankappwithjaggedarray\bankappwithjaggedarray\obj\Debug\net6.0\bankappwithjaggedarray.genruntimeconfig.cache
+C:\Users\adiar\OneDrive\Desktop\iths\ithsclass\bankappwithjaggedarray\bankappwithjaggedarray\obj\Debug\net6.0\ref\bankappwithjaggedarray.dll
