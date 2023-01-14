@@ -62,10 +62,10 @@ namespace SubAccounts
                     Console.WriteLine("What do you want to do?");
                     Console.WriteLine("1. Show Account details:");
                     Console.WriteLine("2. Transfer money between sub accounts");
-                    Console.WriteLine("3. Check the balance of a sub account");
+                    Console.WriteLine("3. Withdraw Money:");
                     Console.WriteLine("4. Log out from your account");
                     Console.WriteLine("5. Deposit money:");
-                    Console.WriteLine("6. Withdraw money:");
+                    Console.WriteLine("6. Check the balance of a sub account");
                     Console.WriteLine("7. To close the program");
                     Console.WriteLine("8. Show transactions details:");
                     Console.WriteLine("=====================================");
@@ -78,6 +78,8 @@ namespace SubAccounts
                             double total = 0;
                             Console.WriteLine();
                             Console.WriteLine("Welcome to your account!");
+                            Console.WriteLine("========================");
+                            Console.WriteLine();
                             Console.WriteLine("Your sub accounts are:");
                             foreach (var subAccount in users[username].Item2)
                             {
@@ -138,16 +140,16 @@ namespace SubAccounts
                             }
                             break;
                         case 3:
-                            // Check the balance of a sub account
+                            // Withdraw money
                             Console.WriteLine("Enter the name of the sub account: ");
-                            string name = Console.ReadLine().ToLower();
+                            string name = Console.ReadLine();
+                            Console.WriteLine("Enter the amount to withdraw: ");
+                            amount = double.Parse(Console.ReadLine());
+                            Console.WriteLine("Enter the password of the account: ");
+                            string enteredPassword = Console.ReadLine();
 
                             // Find the index of the sub account
-                            int index = -1;    /* index is a variable of type int that is used to store the index of a sub account in the list of sub accounts for the user. It is initialized to -1, 
-                                                which is used as a sentinel(a specail value to terminate a loop) value to indicate that the index of the sub account has not been found yet.
-                                                This code iterates through the list of sub accounts for the user, and for each sub account, 
-                                                it compares the name of the sub account (stored in users[username].Item2[i].Item1) to the name of the sub account being searched for (stored in name). 
-                                                If the name of the sub account matches the name being searched for, it sets the value of index to the index of the sub account in the list (stored in i) and breaks out of the loop. */
+                            int index = -1;
                             for (int i = 0; i < users[username].Item2.Count; i++)
                             {
                                 if (users[username].Item2[i].Item1 == name)
@@ -158,20 +160,55 @@ namespace SubAccounts
                             }
 
                             // Validate the input
-                            if (index != -1)
+                            if (index != -1 && enteredPassword == users[username].Item1 && users[username].Item2[index].Item2 >= amount)
                             {
-                                Console.WriteLine($"The balance of sub account {name} is {users[username].Item2[index].Item2:C}.");
+                                // Withdraw the money
+                                users[username].Item2[index] = Tuple.Create(name, users[username].Item2[index].Item2 - amount);
+
+                                transactionHistory.Add(Tuple.Create(username, name, "Withdraw", -amount, DateTime.Now));
+
+
+                                Console.WriteLine("Withdrawal successful!");
                             }
                             else
                             {
-                                Console.WriteLine("Invalid input. Please try again.");
+                                Console.WriteLine("Invalid input. Withdrawal failed.Try again by choosing from the menubar below:");
                             }
                             break;
+                            // Check the balance of a sub account
+                            //Console.WriteLine("Enter the name of the sub account: ");
+                            //string name = Console.ReadLine().ToLower();
+
+                            //// Find the index of the sub account
+                            //int index = -1;    /* index is a variable of type int that is used to store the index of a sub account in the list of sub accounts for the user. It is initialized to -1, 
+                            //                    which is used as a sentinel(a specail value to terminate a loop) value to indicate that the index of the sub account has not been found yet.
+                            //                    This code iterates through the list of sub accounts for the user, and for each sub account, 
+                            //                    it compares the name of the sub account (stored in users[username].Item2[i].Item1) to the name of the sub account being searched for (stored in name). 
+                            //                    If the name of the sub account matches the name being searched for, it sets the value of index to the index of the sub account in the list (stored in i) and breaks out of the loop. */
+                            //for (int i = 0; i < users[username].Item2.Count; i++)
+                            //{
+                            //    if (users[username].Item2[i].Item1 == name)
+                            //    {
+                            //        index = i;
+                            //        break;
+                            //    }
+                            //}
+
+                            //// Validate the input
+                            //if (index != -1)
+                            //{
+                            //    Console.WriteLine($"The balance of sub account {name} is {users[username].Item2[index].Item2:C}.");
+                            //}
+                            //else
+                            //{
+                            //    Console.WriteLine("Invalid input. Please try again.");
+                            //}
+                            //break;
                         case 4:
                             // Log out
                             exit = true;
                             goto Main;
-                            break;
+                          break;
 
                         
                         case 5:
@@ -182,7 +219,7 @@ namespace SubAccounts
                              amount = double.Parse(Console.ReadLine());
 
                             // Find the index of the sub account
-                             index = -1;
+                              index = -1;
                             for (int i = 0; i < users[username].Item2.Count; i++)
                             {
                                 if (users[username].Item2[i].Item1 == name)
@@ -211,16 +248,16 @@ namespace SubAccounts
                             }
                             break;
                           case 6:
-                            // Withdraw money
+                            // Check the balance of a sub account
                             Console.WriteLine("Enter the name of the sub account: ");
-                             name = Console.ReadLine();
-                            Console.WriteLine("Enter the amount to withdraw: ");
-                             amount = double.Parse(Console.ReadLine());
-                            Console.WriteLine("Enter the password of the account: ");
-                            string enteredPassword = Console.ReadLine();
+                             name = Console.ReadLine().ToLower();
 
                             // Find the index of the sub account
-                             index = -1;
+                             index = -1;    /* index is a variable of type int that is used to store the index of a sub account in the list of sub accounts for the user. It is initialized to -1, 
+                                                which is used as a sentinel(a specail value to terminate a loop) value to indicate that the index of the sub account has not been found yet.
+                                                This code iterates through the list of sub accounts for the user, and for each sub account, 
+                                                it compares the name of the sub account (stored in users[username].Item2[i].Item1) to the name of the sub account being searched for (stored in name). 
+                                                If the name of the sub account matches the name being searched for, it sets the value of index to the index of the sub account in the list (stored in i) and breaks out of the loop. */
                             for (int i = 0; i < users[username].Item2.Count; i++)
                             {
                                 if (users[username].Item2[i].Item1 == name)
@@ -231,21 +268,50 @@ namespace SubAccounts
                             }
 
                             // Validate the input
-                            if (index != -1 && enteredPassword == users[username].Item1 && users[username].Item2[index].Item2 >= amount)
+                            if (index != -1)
                             {
-                                // Withdraw the money
-                                users[username].Item2[index] = Tuple.Create(name, users[username].Item2[index].Item2 - amount);
-
-                                transactionHistory.Add(Tuple.Create(username, name, "Withdraw", -amount, DateTime.Now));
-
-
-                                Console.WriteLine("Withdrawal successful!");
+                                Console.WriteLine($"The balance of sub account {name} is {users[username].Item2[index].Item2:C}.");
                             }
                             else
                             {
-                                Console.WriteLine("Invalid input. Withdrawal failed.Try again by choosing from the menubar below:");
+                                Console.WriteLine("Invalid input. Please try again.");
                             }
                             break;
+                            //// Withdraw money
+                            //Console.WriteLine("Enter the name of the sub account: ");
+                            // name = Console.ReadLine();
+                            //Console.WriteLine("Enter the amount to withdraw: ");
+                            // amount = double.Parse(Console.ReadLine());
+                            //Console.WriteLine("Enter the password of the account: ");
+                            //string enteredPassword = Console.ReadLine();
+
+                            //// Find the index of the sub account
+                            // index = -1;
+                            //for (int i = 0; i < users[username].Item2.Count; i++)
+                            //{
+                            //    if (users[username].Item2[i].Item1 == name)
+                            //    {
+                            //        index = i;
+                            //        break;
+                            //    }
+                            //}
+
+                            //// Validate the input
+                            //if (index != -1 && enteredPassword == users[username].Item1 && users[username].Item2[index].Item2 >= amount)
+                            //{
+                            //    // Withdraw the money
+                            //    users[username].Item2[index] = Tuple.Create(name, users[username].Item2[index].Item2 - amount);
+
+                            //    transactionHistory.Add(Tuple.Create(username, name, "Withdraw", -amount, DateTime.Now));
+
+
+                            //    Console.WriteLine("Withdrawal successful!");
+                            //}
+                            //else
+                            //{
+                            //    Console.WriteLine("Invalid input. Withdrawal failed.Try again by choosing from the menubar below:");
+                            //}
+                            //break;
                         
                         case 7:
                             Console.WriteLine("Please tap Enter to close the program.");
