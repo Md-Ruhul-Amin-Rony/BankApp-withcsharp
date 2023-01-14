@@ -59,15 +59,15 @@ namespace SubAccounts
                 {
                     Console.WriteLine("======================================");
                     Console.WriteLine();
-                    Console.WriteLine("What do you want to do?");
+                    Console.WriteLine("What do you want to do? Please type the number that you want to do: ");
                     Console.WriteLine("1. Show Account details:");
                     Console.WriteLine("2. Transfer money between sub accounts");
                     Console.WriteLine("3. Withdraw Money:");
                     Console.WriteLine("4. Log out from your account");
                     Console.WriteLine("5. Deposit money:");
                     Console.WriteLine("6. Check the balance of a sub account");
-                    Console.WriteLine("7. To close the program");
-                    Console.WriteLine("8. Show transactions details:");
+                    Console.WriteLine("7. Show transactions details:");
+                    Console.WriteLine("8.To Close the program: ");
                     Console.WriteLine("=====================================");
                     Console.Write("Enter your choice: ");
 
@@ -277,47 +277,9 @@ namespace SubAccounts
                                 Console.WriteLine("Invalid input. Please try again.");
                             }
                             break;
-                            //// Withdraw money
-                            //Console.WriteLine("Enter the name of the sub account: ");
-                            // name = Console.ReadLine();
-                            //Console.WriteLine("Enter the amount to withdraw: ");
-                            // amount = double.Parse(Console.ReadLine());
-                            //Console.WriteLine("Enter the password of the account: ");
-                            //string enteredPassword = Console.ReadLine();
-
-                            //// Find the index of the sub account
-                            // index = -1;
-                            //for (int i = 0; i < users[username].Item2.Count; i++)
-                            //{
-                            //    if (users[username].Item2[i].Item1 == name)
-                            //    {
-                            //        index = i;
-                            //        break;
-                            //    }
-                            //}
-
-                            //// Validate the input
-                            //if (index != -1 && enteredPassword == users[username].Item1 && users[username].Item2[index].Item2 >= amount)
-                            //{
-                            //    // Withdraw the money
-                            //    users[username].Item2[index] = Tuple.Create(name, users[username].Item2[index].Item2 - amount);
-
-                            //    transactionHistory.Add(Tuple.Create(username, name, "Withdraw", -amount, DateTime.Now));
-
-
-                            //    Console.WriteLine("Withdrawal successful!");
-                            //}
-                            //else
-                            //{
-                            //    Console.WriteLine("Invalid input. Withdrawal failed.Try again by choosing from the menubar below:");
-                            //}
-                            //break;
+                           
                         
-                        case 7:
-                            Console.WriteLine("Please tap Enter to close the program.");
-                            exit= true; 
-                            break;
-                         case 8:
+                         case 7:
                             // View transaction history
                             Console.WriteLine("Transaction history:");
                             foreach (var history in transactionHistory)
@@ -327,16 +289,19 @@ namespace SubAccounts
                             }
 
                             break;
+                        case 8:
+                            Console.WriteLine("Please tap Enter to close the program.");
+                            exit = true;
+                            break;
 
 
 
 
 
-                            
 
 
 
-                           
+
                         default:
                             Console.WriteLine("Invalid choice. Please try again.");
                             break;
