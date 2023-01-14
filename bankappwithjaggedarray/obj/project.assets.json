@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adiar\\OneDrive\\Desktop\\iths\\ithsclass\\bankappwithjaggedarray\\bankappwithjaggedarray\\bankappwithjaggedarray.csproj",
+      "projectUniqueName": "C:\\Users\\adiar\\OneDrive\\Desktop\\iths\\ithsclass\\BankApp-u-Dic-Tup\\bankappwithjaggedarray\\bankappwithjaggedarray.csproj",
       "projectName": "bankappwithjaggedarray",
-      "projectPath": "C:\\Users\\adiar\\OneDrive\\Desktop\\iths\\ithsclass\\bankappwithjaggedarray\\bankappwithjaggedarray\\bankappwithjaggedarray.csproj",
+      "projectPath": "C:\\Users\\adiar\\OneDrive\\Desktop\\iths\\ithsclass\\BankApp-u-Dic-Tup\\bankappwithjaggedarray\\bankappwithjaggedarray.csproj",
       "packagesPath": "C:\\Users\\adiar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adiar\\OneDrive\\Desktop\\iths\\ithsclass\\bankappwithjaggedarray\\bankappwithjaggedarray\\obj\\",
+      "outputPath": "C:\\Users\\adiar\\OneDrive\\Desktop\\iths\\ithsclass\\BankApp-u-Dic-Tup\\bankappwithjaggedarray\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\adiar\\AppData\\Roaming\\NuGet\\NuGet.Config",

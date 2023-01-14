@@ -28,8 +28,8 @@ namespace SubAccounts
 
             List<Tuple<string, string,string, double, DateTime>> transactionHistory = new List<Tuple<string, string, string, double, DateTime>>();
             //create tuple list to store all the transaction history with acountdetails and datetime.
-           
-            Main:
+            //Tuple<string, string, string, double, DateTime>[] transactionHistory= transactionhistory.ToArray();
+        Main:
             // Prompt the user to enter their login information
             Console.WriteLine("Welcome to Banking System. For Login follow the instructions below: ");
             Console.WriteLine();
@@ -243,7 +243,7 @@ namespace SubAccounts
                             }
                             else
                             {
-                                Console.WriteLine("Invalid input. Withdrawal failed.");
+                                Console.WriteLine("Invalid input. Withdrawal failed.Try again by choosing from the menubar below:");
                             }
                             break;
                         
@@ -280,6 +280,9 @@ namespace SubAccounts
             else
             {
                 Console.WriteLine("Invalid login information. Please try again.");
+                Console.WriteLine("============================================");
+                Console.WriteLine();
+                goto Main;
             }
         }
     }
