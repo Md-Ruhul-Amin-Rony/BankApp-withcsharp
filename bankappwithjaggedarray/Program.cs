@@ -39,7 +39,7 @@ namespace SubAccounts
             Main:
             Console.WriteLine("Welcome to Banking System. For Login follow the instructions below: ");
             Console.WriteLine();
-            Console.WriteLine();
+            Console.WriteLine("You can take 3 attempts to successfully logged in, otherwise program will shut down automatically");
 
 
             Console.WriteLine("===================================================================");
@@ -77,7 +77,7 @@ namespace SubAccounts
                         Console.WriteLine("7. Show transactions details of each account:");
                         Console.WriteLine("8.To Close the program: ");
                         Console.WriteLine("=====================================");
-                        Console.Write("Enter your choice: ");
+                        Console.Write("Enter the number you choose to do and Tryck Enter button: ");
 
                         int choice = int.Parse(Console.ReadLine());
                         switch (choice)
@@ -275,6 +275,7 @@ namespace SubAccounts
                            
                                 Console.WriteLine("Please tap Enter to close the program.");
                                 exit = true;
+                                success = false;
                                 break;
 
 
@@ -296,10 +297,11 @@ namespace SubAccounts
                     loginAttempts++;
                     Console.WriteLine("Invalid login information. Please try again.");
                     Console.WriteLine("============================================");
-                    Console.WriteLine();
+                    Console.WriteLine("your Attempt to log in is: "+ loginAttempts);
                     if (loginAttempts>=3)
                     {
                         Console.WriteLine("You have typed invalid input for 3 times and now program is closing.");
+                        Console.WriteLine("Please tryck the Enter button to close the program");
                         success = false;
                     }
 
