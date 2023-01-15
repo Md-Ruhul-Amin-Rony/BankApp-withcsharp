@@ -37,7 +37,8 @@ namespace SubAccounts
             while (success)
             {
             Main:
-            Console.WriteLine("Welcome to Banking System. For Login follow the instructions below: ");
+             Console.WriteLine();
+            Console.WriteLine("Welcome to Banking System. For Login,follow the instructions below: ");
             Console.WriteLine();
             Console.WriteLine("You can take 3 attempts to successfully logged in, otherwise program will shut down automatically");
 
@@ -298,6 +299,7 @@ namespace SubAccounts
                     Console.WriteLine("Invalid login information. Please try again.");
                     Console.WriteLine("============================================");
                     Console.WriteLine("your Attempt to log in is: "+ loginAttempts);
+                    Console.WriteLine("=============================================");
                     if (loginAttempts>=3)
                     {
                         Console.WriteLine("You have typed invalid input for 3 times and now program is closing.");
