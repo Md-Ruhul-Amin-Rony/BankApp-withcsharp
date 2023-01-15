@@ -113,7 +113,7 @@ namespace SubAccounts
                                 Console.WriteLine("Enter the amount of money you want to transfer: ");
                                 double amount = double.Parse(Console.ReadLine());
                                 // destination sub accounts
-                                /*  'sourceIndex' and 'destinationIndex' are variables of type int that are initialized to -1. 
+                                /*  'sourceIndex' and 'destinationIndex' are variables of type int that are initialized to -1. in this case -1, indicating that the source sub account has not been found yet. 
                                   These variables are used to store the indices of the source and destination sub accounts in the list of sub accounts for the user.
                                     The sourceIndex variable is used to store the index of the source sub account, which is the sub account from which the money is being transferred.
                                 The destinationIndex variable is used to store the index of the destination sub account, which is the sub account to which the money is being transferred. */
