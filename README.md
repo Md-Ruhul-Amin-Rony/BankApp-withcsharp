@@ -8,5 +8,5 @@ I have chossen to  use 'Dictionary' and 'Tuple' to solve this problem because i 
 
 But i could easily make this App by using OOP concept also which i did for myself. Where i have made a "User Class" for making static user where i used a 'List<Account> accounts' for making different amount of accounts for each user. Then i have created a "Account Class" and to show the 'Transactions' i have chosen a 'List<Transaction>' property on 'Account class' and then  i made a 'Transaction class' with related properties.
   
-  I have tried this same app by using Clean Architecture also. Where i have made diiferent folder for making different class and i have used "Dependency Injektion" and i made it more dynamic.
+  I have tried this same app by using Clean Architecture also. Where i have made diiferent folder for making different class and i have used "Dependency Injektion" and "Hosting"  and i made it more dynamic where we can create account and transfer amount between different users.
   
