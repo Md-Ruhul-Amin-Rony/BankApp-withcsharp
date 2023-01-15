@@ -1,7 +1,8 @@
 # BankApp-withcsharp
-This Bank app has 5st sattic user with username and password to login where each user has different amount of accounts on it like(user1 has two accounts- savings account and pension acoount etc), every user after successfully logged in can deposit, withdraw and tranfer money between accounts and even can see the transaction history. One user can log out and at that time the program will not shut down instead the program will continue so that another user(5st static users) can login and use all the the functionality.
+This Bank app has 5st sattic user with username and password to login where each user has different amount of accounts on it like(user1 has two accounts- savings account and pension acoount etc), every user after successfully logged in can deposit, withdraw and tranfer money between sub  accounts and even can see the transaction history. One user can log out and at that time the program will not shut down instead the program will continue so that another user(5st static users) can login and use all the the functionality. I have added 3 times attempt for successfully login otherwise program will close automatically.
+
 I have used Dictionary to create static user as 'key' and Tuple as 'value' for password and making a list of Tuple<string, double> for sub accounts where 'string' will represent sub accounts name and 'double' will represent the amount on each sub account. .
-For showing transactions history i have shown 'from account' and 'to account' and 'datetime' also.
+For showing transactions history i have shown 'from account' and 'to account' and 'datetime' also. As if decimal give more precision about counting money but i have used double because it takes less memory and program will be faster than using decimal.
 
 I have chossen to  use 'Dictionary' and 'Tuple' to solve this problem because i have learned this two topics newly and found it very powerful and exciting and that is why i tried to experiment with 'Dictionary' and 'Tuple'. Beside this, I tried to not use OOP concept on this simple App. 
 
