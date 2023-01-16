@@ -28,10 +28,11 @@ namespace SubAccounts
             users.Add("user5", Tuple.Create("password5", new List<Tuple<string, double>> { Tuple.Create("checking", 100.00), Tuple.Create("savings", 200.00), Tuple.Create("investment", 300.00), Tuple.Create("emergency", 400.00), Tuple.Create("vacation", 500.00),Tuple.Create("family",600.00) }));
 
 
-            List<Tuple<string, string,string, double, DateTime>> transactionHistory = new List<Tuple<string, string, string, double , DateTime>>();
+            List<Tuple<string, string,string, double, DateTime>> transactionHistory1 = new List<Tuple<string, string, string, double , DateTime>>();
+            Tuple<string, string, string, double, DateTime>[] transactionHistory = transactionHistory1.ToArray();// skapat List till Array.
             //create tuple list to store all the transaction history with acountdetails and datetime.
             //Tuple<string, string, string, double, DateTime>[] transactionHistory= transactionhistory.ToArray();
-        
+
             int loginAttempts = 0;
             bool success = true;// Prompt the user to enter their login information
             while (success)
@@ -139,7 +140,10 @@ namespace SubAccounts
                                     users[username].Item2[sourceIndex] = Tuple.Create(sourceName, users[username].Item2[sourceIndex].Item2 - amount);
                                     users[username].Item2[destinationIndex] = Tuple.Create(destinationName, users[username].Item2[destinationIndex].Item2 + amount);
 
-                                    transactionHistory.Add(Tuple.Create(username, sourceName, destinationName, amount, DateTime.Now));
+                                    //transactionHistory.Add(Tuple.Create(username, sourceName, destinationName, amount, DateTime.Now));
+                                    transactionHistory = transactionHistory.Concat(new[] { Tuple.Create(username, sourceName, destinationName, amount, DateTime.Now) }).ToArray();
+
+
                                     //adding all the transactions to the transactionHistory List.
 
 
@@ -176,7 +180,9 @@ namespace SubAccounts
                                     // Withdraw the money
                                     users[username].Item2[index] = Tuple.Create(name, users[username].Item2[index].Item2 - amount);
 
-                                    transactionHistory.Add(Tuple.Create(username, name, "Withdraw", -amount, DateTime.Now));
+                                    //transactionHistory.Add(Tuple.Create(username, name, "Withdraw", -amount, DateTime.Now));
+                                    transactionHistory = transactionHistory.Concat(new[] { Tuple.Create(username, name, "Withdraw", -amount, DateTime.Now) }).ToArray();
+
 
 
                                     Console.WriteLine("Withdrawal successful!");
@@ -220,7 +226,9 @@ namespace SubAccounts
                                     /* is updating the balance of the current sub-account at the specific index of the list of sub-accounts.
                                      The old sub-account tuple is being replaced with the new tuple which has the updated balance.
                                     This way the deposit amount is added to the existing balance of the sub-account.*/
-                                    transactionHistory.Add(Tuple.Create(username, name, "Deposit", amount, DateTime.Now));
+                                    // transactionHistory.Add(Tuple.Create(username, name, "Deposit", amount, DateTime.Now));
+                                    transactionHistory = transactionHistory.Concat(new[] { Tuple.Create(username, name, "Deposit", amount, DateTime.Now) }).ToArray();
+
 
 
                                     Console.WriteLine("Deposit successful!");
